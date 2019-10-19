@@ -37,12 +37,16 @@ function login(){
         console.log(response.token)
         localStorage.setItem("Token", response.token);
        // sessionStorage.setItem('Token', response.token);
+      
 
           alert("PERFECTO " + usuariodato.username + " Te has logueado correctamente, tu id es: " + usuariodato.id);
+         window.location="page.html";
           
        }
    })
-   //.catch(error => console.error('Error:', error));
+   .catch(error => console.error('Error:', error));
+
+   
 
 } 
 
@@ -57,10 +61,22 @@ function login(){
 
 
 
+
+
+
+
 window.onload = function(){
 
     if(localStorage.getItem("Token")) {
         console.log('Token')
+
+
+        console.log("Working");
+        window.location="page.html";
+
+    //document.getElementById("post_view").addEventListener('click', showPost);
+   // document.getElementById("mypost_view").addEventListener('click', showMyPost);
+  //  document.getElementById("profile_view").addEventListener('click', showProfile);
 
     }
 
